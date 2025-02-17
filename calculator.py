@@ -154,6 +154,36 @@ class TestCalculator:
         assert result == "= Can't divide by zero"
 
 
+    def test_6_Decimals(self):
+        """Test case for 5.1 + 2.1 = 7.2 """
+
+        self.click_clear()
+
+        btn_5 = self.driver.find_element(by=AppiumBy.ID, value="com.miui.calculator:id/btn_5_s")
+        btn_dot = self.driver.find_element(by=AppiumBy.ID, value="com.miui.calculator:id/btn_dot_s")
+        btn_1 = self.driver.find_element(by=AppiumBy.ID, value="com.miui.calculator:id/btn_1_s")
+        btn_add = self.driver.find_element(by=AppiumBy.ID, value="com.miui.calculator:id/btn_plus_s")
+        btn_2 = self.driver.find_element(by=AppiumBy.ID, value="com.miui.calculator:id/btn_2_s")
+        btn_equals = self.driver.find_element(by=AppiumBy.ID, value="com.miui.calculator:id/btn_equal_s")
+
+        # Click the buttons
+        btn_5.click()
+        btn_dot.click()
+        btn_1.click()
+        btn_add.click()
+        btn_2.click()
+        btn_dot.click()
+        btn_1.click()
+        btn_equals.click()
+
+        # Try to get the result
+        result = self.driver.find_element(by=AppiumBy.ID, value="com.miui.calculator:id/result").text.strip()
+        print(f"The result of 5.1 + 2.1 {result}")
+
+        # Assertion
+        assert result == "= 7.2"
+
+
 
 
 
