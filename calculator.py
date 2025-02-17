@@ -148,7 +148,7 @@ class TestCalculator:
 
 
 
-# SEPARATOR
+# SEPARATOR for pytest and unittest
 
 
 
