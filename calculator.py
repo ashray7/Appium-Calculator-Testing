@@ -163,6 +163,6 @@ class TestCalculator:
 
         self.click_button(BTN_MORE)
         self.click_button(BTN_HISTORY)
-
+        
         time.sleep(10)
         
